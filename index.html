@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<title>foodblogNAT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<link rel="icon" href="slike\boiling.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style> 
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Sofia", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+body{
+	   background-color:#EADFD9;
+	   }
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #0ed7dc;
+  border: none;
+  border-radius: 38px;
+  
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@keyframes boiling-animate {
+    0% {
+		transform: rotate(30deg);
+    }
+    50% {
+		transform: rotate(-30deg);
+    }
+	100% {
+		transform: rotate(30deg);
+    }
+}
+
+.fa{
+  animation: 1s ease-out 0s 3 boiling-animate;
+}
+
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+
+
+
+
+
+</style>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left w3-center hide-scroll" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Schließen<img src="slike\boiling.png" style="width:50px"></a>
+      <img id="img01" class="container" style="width:50%">
+  <div class="center w3-container w3-xlarge w3-text-black" style="background: rgba(255, 255, 255, .7);">
+    <h3>Zutaten:</h3> 
+<ul name="recept" type="sqaure"></ul>	
+<p id="priprema"></p>
+</div>
+      <p id="caption"></p>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <!-- <div class="w3-button w3-left" onclick="w3_open()">☰</div> -->
+    <!-- <div class="w3-right w3-padding-16">Mail</div> -->
+    <div class="w3-center w3-padding-16"><b>Salzig&süß</b></div>
+  </div>
+</div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    
+     <!-- <p>Click on the icon to toggle between thumbs-up and thumbs-down (like/dislike):</p> -->
+
+   
+  
+  
+    <div class="w3-panel w3-card-2 w3-hover-shadow w3-quarter">
+	<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+	<button class="w3-container button w3-code" onclick="onClick('Hörnchen')"><img class="fa" src="slike\boiling.png" alt="Sandwich" style="width:50px"></button>
+      <img class="w3-image" style="max-height:200px; min-width: 170px; object-fit: contain;" id="Hörnchen" src="slike\Hörnchen.jpg" data-priprema="Machen Sie Hefe
+	  , Zucker und lauwarmer Milch.  Wenn die Hefe angekommen ist, fügen Sie sie dem Mehl hinzu, in das Sie bereits Salz, Backpulver,
+	  Ei und Öl gemischt haben.  Kneten Sie den Teig, bis Sie eine glatte Masse erhalten.  Decken Sie den Teig mit Plastikfolie ab. Lassen
+	  Sie den Teig 10 Minuten bei Raumtemperatur stehen und kneten Sie ihn. <br /> 
+	  Weitere 30 Minuten einwirken lassen und erneut mischen und zu 
+	  Hörnchen formen.  Lassen Sie die Hörnchen etwa eine halbe Stunde bei Raumtemperatur gehen.<br />
+	  Die Hörnchen mit geschlagenem Ei bestreichen,
+	  zu dem Sie einen Esslöffel Milch oder Wasser hinzugefügt haben, und auf Wunsch mit Sesam bestreuen. 
+	  Backen Sie die Hörnchen je nach Ofen etwa 20 Minuten lang bei 180 Grad." data-recept="500 g Mehl#eine halbe Tüte Backpulver#100 ml Öl#250 ml 
+	  lauwarme Milch#2 Teelöffel Zucker (ca. 10 g)#1,5 Teelöffel Salz (ca. 8 g)#1 Ei#einen halben Würfel frische Hefe (20 g) oder eine Tüte Trockenhefe ca. 7 gr)#1 Ei zum Überziehen"/>
+      <h3 class="w3-container">Hörnchen</h3>
+	  
+    </div>
+	
+	    <div class="w3-panel w3-card-2 w3-hover-shadow w3-quarter">
+		<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+	<button class="w3-container button w3-code" onclick="onClick('ostern_menu')"><img class="fa" src="slike\boiling.png" alt="Sandwich" style="width:50px"></button>
+      <img class="w3-image" style="max-height:200px; min-width: 170px; object-fit: contain;" id="ostern_menu" src="slike\ostern_menu.jpg" data-priprema="Gießen Sie Milch über das Brot und kneten Sie es und verquirlen Sie es.
+
+4 Eier kochen.
+
+Fügen Sie fein gehackte Zwiebeln und Knoblauch, Fleisch, geriebene Karotten und geriebenen Sellerie, Petersilienblatt und Gewürze hinzu, um das Brot zu schmecken und gut zu mischen.
+
+Die Hälfte der Mischung auf Aluminiumfolie legen, dann Eier legen und den Rest der Mischung darauf legen.
+
+Bilden Sie mit Ihren Händen eine Rolle, dicke Wurst, schließen Sie die Folie von allen Seiten und backen Sie sie 30 Minuten lang bei 200 Grad.
+
+Wickeln Sie die Folie nach 30 Minuten aus und lassen Sie sie 10 Minuten backen.
+
+Kühlen Sie die Rolle ab und schneiden Sie sie erst dann, um ein schönes Stück zu erhalten.
+Nach Belieben mit Spinatsauce, Kartoffelpüree und Salat servieren." data-recept="700 gram Hackfleisch # 1 Stück altes Brot # 4 Eier # 1,5 dl Milch # 1 Zwiebel # 1 Knoblauchzehe # 1 Karotte # 1 Stück Sellerie # Petersilienblatt
+# Salz, Pfeffer und trockenem Gewürz nach Geschmack # Semmelbröse"/>
+      <h3 class="w3-container">Hackbraten mit Ei</h3>
+    </div>
+	
+	 <div class="w3-panel w3-card-2 w3-hover-shadow w3-quarter">
+	 <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+	<button class="w3-container button w3-code" onclick="onClick('cupavci 2')"><img class="fa" src="slike\boiling.png" alt="Sandwich" style="width:50px"></button>
+      <img class="w3-image" style="max-height:200px; min-width: 170px; object-fit: contain;" id="cupavci 2" src="slike\cupavci 2.jpg" data-priprema="Bereiten Sie aus den aufgeführten Zutaten den Keksteig vor:
+	  Geben Sie das Eiweiß in eine Rührschüssel und trennen 
+	  Sie das Eigelb in ein Glas. Mischen Sie das Eiweiß mit dem Zucker zu einem festen Teig, 
+	  fügen Sie es hinzu und mischen Sie es in der Reihenfolge: Öl, 6 Esslöffel Mehl und Backpulver, jeweils ein Eigelb, dann die Milch und das restliche Mehl. <br />
+	  In ein mittelgroßes Tablett (ca. 25 × 35 cm) gießen, in das wir Backpapier legen (zum leichteren Entfernen der Würfel). 
+	<br />
+      Bei 180 ° C backen, bis sich der Keks von den Seiten des Backblechs zu lösen beginnt.
+
+     <br />
+      Kochen Sie die Punschcreme, indem Sie zuerst die Margarine und die Schokolade schmelzen. Wenn sie geschmolzen sind, fügen Sie den Zucker, dann die Milch und schließlich den Rum hinzu. Wenn die Sahne kocht, vom Herd nehmen.
+
+      <br />
+      Schneiden Sie den Keks in Würfel, tauchen Sie ihn dann jeweils in warme Sahne und rollen Sie ihn in Kokosmehl. 
+	  " data-recept="TEIG:#3 Eier#10 Esslöffel Kristallzucker (220 g)#13 Esslöffel Öl (180 ml)#16 Esslöffel Mehl (300 g)#100 ml Milch#1 Backpulver#PUNSCHCREME:
+#250 g Margarine#100 g Kochschokolade#1 Esslöffel Rum#200 ml Milch#ein Glas 200 ml Kristallzucker
+#ANDERE:
+#300 g grob gemahlene Kokosnuss "/>
+      <h3 class="w3-container">Kokoswürfel </h3>
+    </div>
+	 <div class="w3-panel w3-card-2 w3-hover-shadow w3-quarter">
+	 <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+	<button class="w3-container button w3-code" onclick="onClick('paprika')"><img class="fa" src="slike\boiling.png" alt="Sandwich" style="width:50px"></button>
+      <img class="w3-image" style="max-height:200px; min-width: 170px; object-fit: contain;" id="paprika" src="slike\paprika.jpg" data-priprema="Paprika, vorzugsweise dünnwandig, kernlos,
+
+Legen Sie das Hackfleisch in eine Schüssel und fügen Sie alle Zutaten nacheinander hinzu.
+Rühren Sie sich gut um und versuchen Sie herauszufinden, ob es gut schmeckt (von etwas rohem Fleisch erhalten Sie nichts).
+Füllen Sie die Paprika mit der Mischung.
+
+Öl in einen Topf geben, gefüllte Paprika in Öl anbraten
+Um den Duft freizusetzen, fügen Sie zerdrückte Tomaten hinzu oder konzentrieren Sie sich darauf.
+Fügen Sie Wasser hinzu, um den Paprika zu bedecken, setzen Sie eine Wurzel oder ein Blatt Sellerie.
+Abdecken und anderthalb Stunden kochen lassen, heiß mit viel Sauce servieren.
+Gefüllte Paprikaschoten passen am besten zu Kartoffelpüree oder einfach zu Brot. " data-recept="FLEISCH#700 gram Hackfleisch#2 Stück fein gehackte Zwiebelköpfe#3 gehackte Knoblauchzehen
+#1 Esslöffel gemahlener Paprika#1 Teelöffel Salz#1/2 Teelöffel schwarzer Pfeffer#6 Esslöffel Reis#1 Esslöffel fein gehackte Petersilie#1 Esslöffel Vegeta
+#ANDERE#1 kg Paprika#1/2 dl Olivenöl#2 Esslöffel Mehl#1 Zweig Sellerieblätter#2-3 Esslöffel Tomatenkonzentrat#ein bisschen Salz "/>
+      <h3 class="w3-container">Gefüllte Paprika</h3>
+    </div>
+	</div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+
+    <div class="w3-panel w3-card-2 w3-hover-shadow w3-quarter">
+	 <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+	<button class="w3-container button w3-code" onclick="onClick('Forelle')"><img class="fa" src="slike\boiling.png" alt="Sandwich" style="width:50px"></button>
+      <img class="w3-image" style="max-height:200px; min-width: 170px; object-fit: contain;" id="Forelle" src="slike\Forelle.jpg" data-priprema="Den Fisch unter Wasser abspülen und trocknen.
+
+Ich habe ihnen auch die Köpfe abgeschnitten, damit sie in die Pfanne passen.<br />
+
+Bereiten Sie eine Marinade aus Olivenöl, fein gehacktem Knoblauch, etwas Pfeffer und Petersilie vor.<br />
+
+Den Fisch gut salzen und mit Marinade bestreichen. Mindestens eine Stunde im Kühlschrank stehen lassen.<br />
+
+Nachdem Sie in der Marinade gestanden haben, rollen Sie den Fisch in MaisGrieß , etwas Mehl und süßem Paprikapulver.<br />
+
+ In erhitztem Öl 7-8 Minuten auf beiden Seiten goldbraun und fein knusprig braten.<br />
+ 
+
+Mit Zitrone und kaltem Kartoffelsalat servieren." data-recept="1 kg Forelle#100 ml Olivenöl#1 Knoblauchzehe#Petersilie#Salz und Pfeffer#MaisGrieß 
+#Mehl 2 EL#Paprika-Pulver#Öl"/>
+ 
+      <h3 class="w3-container">Forelle#Gabi#</h3>
+    </div>
+	
+    <div class="w3-panel w3-card-2 w3-hover-shadow w3-quarter">
+	 <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+	<button class="w3-container button w3-code" onclick="onClick('krautfleckerl')"><img class="fa" src="slike\boiling.png" alt="Sandwich" style="width:50px"></button>
+      <img class="w3-image" style="max-height:200px; min-width: 170px; object-fit: contain;" id="krautfleckerl" src="slike\krautfleckerl.jpg" data-priprema="Reinigen Sie die äußeren Blätter von Kohl,
+	  schneiden Sie ihn in zwei Hälften und entfernen Sie die harte Wurzel.
+	  Schneiden Sie dann den Kohl in Quadrate.<br />
+	  
+
+Das Öl in einem Topf erhitzen, die fein gehackte Zwiebel hinzufügen und weich und glasig köcheln lassen,
+ dann den Zucker hinzufügen und etwas mehr köcheln lassen, um den Zucker etwas zu karamellisieren. <br />
+ 
+ Fügen Sie geschnittenen Kohl hinzu, salzen Sie ihn und braten Sie ihn 10-15 Minuten lang an, 
+ bis der Kohl etwas weicher wird.<br />
+ 
+
+  In einem großen Topf in Salzwasser die Nudeln (al Dente) kochen, abtropfen lassen und zum Kohl geben.<br />
+  Rühren, alles noch ein paar Minuten zusammenrühren, mit viel Pfeffer würzen und sofort servieren. " 
+  data-recept="1 großer Kopf frischer Kohl (ca. 1 kg)#1-2 Esslöffel Öl#1 Esslöffel Zucker#Salz#Pfeffer#300g BandNudeln"/>
+      <h3 class="w3-container">Krautfleckerl</h3>
+    </div>
+	
+	<div class="w3-panel w3-card-2 w3-hover-shadow w3-quarter">
+	 <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+	<button class="w3-container button w3-code" onclick="onClick('schmarne')"><img class="fa" src="slike\boiling.png" alt="Sandwich" style="width:50px"></button>
+      <img class="w3-image" style="max-height:200px; min-width: 170px; object-fit: contain;" id="schmarne" src="slike\schmarne.jpg" data-priprema="Die Geschichte des Rezeptes für Kaiserschmarrn ist mit zwei Legenden verbunden, und eine davon erzählt, 
+	  wie Kaiser Franz Joseph während einer Reise wegen schlechten Wetters in einem Dorf Zuflucht suchte. Sie beherbergten ihn in einem bescheidenen Haushalt,
+	  in dem die Gastgeberin ein für die Arbeiter dort übliches Gericht zubereitete, dem Rezept jedoch Eier, Beeren und Milch hinzufügte.
+	  Franz Joseph war begeistert von Aroma und Geschmack und so entstand die Spezialität Kaiserschmarrn, die die österreichische Gastronomie kennzeichnete.
+
+Eine andere Legende besagt, dass der Hofkoch in einem fehlgeschlagenen Versuch, Pfannkuchen zuzubereiten, 
+Rosinen und Kirschen in die Pfanne gab,
+ dann alles mit Zucker bestreute und es dem Kaiser als „neues Gericht“ servierte.<br/><br/><br/>
+ 
+
+Von allen Zutaten mit einem Schneebesen (oder Mixer, wenn Sie es vorziehen) den Teig etwas dicker als bei Pfannkuchen verquirlen.
+Gießen Sie die Mischung in einer großen Pfanne über viel Öl oder Butter (sicher ca. 100 ml) und braten Sie sie bei starker Hitze unter gelegentlichem Rühren.<br/>
+
+ Da die Mischung von unten aushärtet, sollte sie mit einem Löffel geschnitten und gehackt, gerührt und wiederholt werden,
+ bis sich das Ganze in kleine Klumpen (einige kleinere, andere größere) verwandelt und eine schöne goldene Farbe annimmt.
+Für mich sind Schmarrns am besten, wenn sie sehr heiß sind, also knusprig und gebacken.<br/>
+Sofort servieren, warm mit saurer Sahne und als süße Option zu Ihrer Lieblingsmarmelade." 
+  data-recept="#4 Eier#100 ml Milch#200 g Mehl#Teelöffel Salz#Öl  "/>
+      <h3 class="w3-container">Kaiserschmarrn</h3>
+    </div>
+	
+	<div class="w3-panel w3-card-2 w3-hover-shadow w3-quarter">
+	 <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+	<button class="w3-container button w3-code" onclick="onClick('risoto')"><img class="fa" src="slike\boiling.png" alt="Sandwich" style="width:50px"></button>
+      <img class="w3-image" style="max-height:200px; min-width: 170px; object-fit: contain;" id="risoto" src="slike\risoto.jpg" data-priprema=" Die drei goldenen Regeln für die Zubereitung von Risotto
+	  sind Reis, Brühe und Butter.<br/>
+	  Das erste und wichtigste ist die Auswahl des Reises. Die einfachste und am leichtesten verfügbare Wahl ist Arborio-Reis.<br/>
+	  
+Wenn Sie ein wirklich tolles Risotto zubereiten möchten, verwenden Sie beim Gießen unbedingt Hühner-, Rind- oder Gemüsebrühe.<br/><br/>
+
+
+Die cremige Textur des Risottos wird mit einer guten Dosis Butter erreicht.
+ Wenn der Reis noch al dente ist und das Wasser im Topf noch nicht vollständig verdunstet ist,
+ fügen Sie die bei Raumtemperatur stehenden Butterwürfel hinzu, mischen Sie alles gut und nehmen Sie sie vom Herd..<br/><br/>
+ 
+	  Eine Zwiebel schälen und in kleine Stücke schneiden.
+ Karotten in Ringe geschnitten.
+Schneiden Sie den Sellerie auf die gleiche Größe wie die Karotte.
+Knoblauch schälen und in kleine Stücke schneiden.
+Schneiden Sie das Hähnchenbrust in Stücke von etwa 1 bis 1,5 cm Größe.
+Gießen Sie Öl in einen Kochtopf und lassen Sie es aufwärmen.
+Dann fügen Sie geschnittene Zwiebeln, Karotten, Sellerie und schließlich Knoblauch hinzu.
+Unter Rühren ca. 10 Minuten köcheln lassen.<br/>
+
+Das geschnittene Hähnchenbrust in das weiche Gemüse geben und unter Rühren erneut 10 Minuten köcheln lassen.
+Nach 10 Minuten die Tomatensauce einfüllen, umrühren und weitere 5 Minuten köcheln lassen.
+Dann Wasser hinzufügen, umrühren und beim Kochen 15 Minuten köcheln lassen.<br/>
+
+Zum Schluss den Reis in eine Schüssel geben, gut mischen und gemäß den Anweisungen aus der Reisschachtel kochen (15 bis 20 Minuten).
+Stellen Sie sicher, dass dem Essen nicht das Wasser ausgeht (ggf. mehr warmes Wasser in eine Schüssel oder Hühnerbrühe geben).
+Nach Belieben Salz und Pfeffer hinzufügen und ganz am Ende Butter hinzufügen und das Risotto umrühren, damit der Reis es so gut wie möglich aufnimmt.
+Wenn das Gericht fertig ist, nehmen Sie es vom Herd und lassen Sie es vor dem Servieren etwa 15 Minuten ruhen." 
+  data-recept="#50 ml Öl#1 große rote Zwiebel#2 größere frische Karotten#100 g Selleriewurzel#2 Knoblauchzehen#400 g Hähnchenbrust #300 ml Tomatensauce#300 ml Wasser#200 g Reis#Salz-Pfeffer#50 g Butter   "/>
+      <h3 class="w3-container">Hähnchen mit Reis</h3>
+    </div>
+	
+	<div class="w3-panel w3-card-2 w3-hover-shadow w3-quarter">
+	 <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+	<button class="w3-container button w3-code" onclick="onClick('cokoladnikolac')"><img class="fa" src="slike\boiling.png" alt="Sandwich" style="width:50px"></button>
+      <img class="w3-image" style="max-height:200px; min-width: 170px; object-fit: contain;" id="cokoladnikolac" src="slike\cokoladnikolac.jpg" data-priprema=" Eigelb und Zucker mit einem Mixer schlagen.
+
+Fügen Sie geschmolzene Schokolade hinzu (die wir mit gedämpfter Margarine geschmolzen haben).
+Mehl mit Backpulver hinzufügen. und schließlich einen Schnee von 4 Eiweiß (Eiweiß von Hand hinzufügen). Bei 180° C ca. 20 min backen.
+Gießen Sie 1-1,5 dcl heiße Milch über den heißen Keks.
+Den Keks abkühlen lassen.<br/><br/>
+Für die GANACHE-CREME die Schokolade und die Sahne in einem Dampfgarer schmelzen und ca. 10 Minuten mischen.
+Über den kalten Keks gießen, etwas draußen ruhen lassen und zum Aushärten in den Kühlschrank stellen. In Würfel schneiden. " 
+  data-recept="#4 Eier#15dkg Zucker#4 Esslöffel (ca. 7 dkg) Mehl#ein halbes Backpulver#20dkg kuvertüre#20dkg Margarine#GANACHE CREME#500ml Schlagsahne#30dkg kuvertüre#1-1,5 dcl heiße Milch (für gebackenen Keks)   "/>
+      <h3 class="w3-container">Schokoladenkuchen</h3>
+    </div>
+	
+	<div class="w3-panel w3-card-2 w3-hover-shadow w3-quarter">
+	 <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+	<button class="w3-container button w3-code" onclick="onClick('kremsnite2')"><img class="fa" src="slike\boiling.png" alt="Sandwich" style="width:50px"></button>
+      <img class="w3-image" style="max-height:200px; min-width: 170px; object-fit: contain;" id="kremsnite2" src="slike\kremsnite2.jpg" data-priprema=" Übertragen Sie den Blätterteig auf ein umgekehrtes Backblech
+	  (Backblech Größe 20x35 oder rund 26 cm). 
+	  15-20 Minuten in einem auf 200 ° C vorgeheizten Ofen backen.<br/><br/>
+	  
+     Von der Gesamtmilchmenge 3 dcl beiseite stellen und den Rest zum Kochen bringen.
+170 g Zucker und Vanillezucker zum Eigelb geben, zu einer schaumigen Mischung mischen und die Milch, dann das Mehl und den Vanillepudding hinzufügen..
+Machen Sie Eiweiß, indem Sie dem Eiweiß eine Prise Salz hinzufügen, mischen Sie es in festen Schnee und fügen Sie dann nach und nach 170 g Zucker hinzu.<br/>
+
+  
+Wenn die Milch kocht, reduzieren Sie die Hitze, gießen Sie die Eigelbmischung leicht und mischen Sie gut, so dass sich keine Klumpen bilden. Wenn die Kreme dick wird, 
+nehmen Sie sie vom Herd und mischen Sie das Eiweiß in die heiße Mischung.<br/><br/>
+
+Legen Sie die Blätterteigkruste in die Form, in der Sie den Teig gebacken haben, verteilen Sie die heiße Kreme darauf und bedecken Sie sie mit einer weiteren Teigkruste.
+Den Kuchen über Nacht abkühlen lassen, vor dem Servieren mit reichlich Puderzucker bestreuen." 
+ 
+  data-recept="#1 Liter Milch#2x170 g Zucker#2 Beutel Vanillezucker#1 Esslöffel Mehl#3 Vanillepudding#4 Eier#250 g Blätterteig"/>
+      <h3 class="w3-container">Cremeschnitte</h3>
+    </div>
+	
+	
+   
+	  <!-- <div class="w3-quarter">
+      <img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
+      <h3>The Perfect Sandwich, A Real Classic</h3>
+      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="/w3images/croissant.jpg" alt="Croissant" style="width:100%">
+      <h3>Le French</h3>
+      <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div> -->
+  </div>
+
+
+  <!-- Pagination -->
+  <!-- <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div> -->
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>Um ein Gericht zu kreieren, das durch Aussehen, Geschmack und Textur begeistert, ist es notwendig, die Zutaten gut zu kennen und die Grundprinzipien des Kochens zu respektieren.
+	Einige Lebensmittel sind wunderbar und lecker, so wie wir sie in der Natur finden und so serviert werden. </h3><br>
+    <!-- <img src="/w3images/chef.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533"> -->
+    <div class="w3-padding-32">
+      <h4><b>I am Who I Am!</b></h4>
+      <h4><i>With Passion For Real, Good Food</i></h4>
+      <h3>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and I want to share my world with you!</h3>
+    </div>
+  </div>
+  <hr>
+  
+  <!-- Footer -->
+  <footer class="w3-cell-row w3-padding-32">
+    <div class="w3-container w3-cell w3-cell-top">
+      <h3><b>Weniger ist mehr!</b></h3>
+      <!-- <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p> -->
+      <p>Powered by <a target="_blank">NATASCHA#</a></p>
+	      </div>
+		  
+    <div class="w3-container w3-cell w3-cell-bottom w3-right-align">
+		  <a title="hit counter"><img src="https://counter1.stat.ovh/private/freecounterstat.php?c=7157gkj5hbq7hnjks7we1c7aax5mrcxs" border="0" title="hit counter" alt="hit counter"></a>
+
+    </div>
+    <!-- <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Lorem</span><br>
+          <span>Sed mattis nunc</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Ipsum</span><br>
+          <span>Praes tinci sed</span>
+        </li> 
+      </ul>
+    </div> -->
+
+    <!-- <div class="w3-third w3-serif">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+      </p>
+    </div> -->
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+function onClick(elementID) {
+  element = document.getElementById(elementID);
+  document.getElementById("img01").src = element.src;
+  <!-- document.getElementById("modal01").style.display = "block"; -->
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+  
+  onload(element);
+}
+
+function onload(element) {
+
+<!-- var array = JSON.parse("[" + string"]"); -->
+
+var response = element.getAttribute('data-recept').split("#");
+
+var inputs = document.getElementsByName("recept");
+inputs[0].innerHTML = "";
+<!-- for(var i = 0; i < inputs.length; i++) { -->
+
+
+for (i = 0; i < response.length; i++) 
+{ 
+	var node = document.createElement("LI");  // Create a <li> node
+	var textnode = document.createTextNode(response[i]); // Create a text node
+	node.appendChild(textnode); 
+	inputs[0].appendChild(node); ///append Item
+}
+
+var priprema = document.getElementById("priprema");
+priprema.innerHTML = (element.getAttribute('data-priprema'));
+
+w3_open();
+}
+function myFunction(x) {
+  x.classList.toggle("fa-thumbs-down");
+}
+
+
+
+
+</script>
+
+</body>
+</html>
